@@ -50,8 +50,16 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.box-story {
+    padding: 10px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 .author-info {
@@ -74,11 +82,6 @@ body {
 .meme-post img {
     max-width: 100%;
 }
-
-.meme-post {
-    margin-bottom: 10%;
-}
-
 
 .comments {
     width: 20%;
