@@ -6,6 +6,9 @@
 
     
 }
+
+
+
 .nav-button {
     margin-right: 5%;
     color:darkgoldenrod;
@@ -27,7 +30,10 @@
     justify-content: center;
     flex-wrap: nowrap;
 }
-
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
 
 /* ********************************************************************* */
 
@@ -61,7 +67,18 @@ body {
     padding: 10px;
     margin: 10px;
     border: 5px dashed yellow;
+    justify-content: center;
+    text-align: center;
 }
+
+.meme-post img {
+    max-width: 100%;
+}
+
+.meme-post {
+    margin-bottom: 10%;
+}
+
 
 .comments {
     width: 20%;
