@@ -17,6 +17,7 @@
     border: 2px solid darkgoldenrod;
     border-radius: 8px;
     list-style: none;
+    width: 7%;
 }
 
 .nav-button:hover {
@@ -29,6 +30,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
+    padding-left: 5%;
 }
 a {
     text-decoration: inherit;
@@ -49,16 +51,17 @@ body {
 .content {
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 10px;
+    /* padding: 10px; */
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .box-story {
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     justify-content: center;
-    width: 100%;
+    text-align: center;
+    /* width: 100%; */
     margin-bottom: 5%;
 }
 
@@ -91,7 +94,7 @@ body {
 }
 
 div {
-    border: 5px dashed white;
+    border: 1px dashed white;
 }
 
 
