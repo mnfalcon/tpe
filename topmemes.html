@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slides.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        
+        <ul class="nav-bar">
+            <li class="nav-button"><a href = "index.html">Inicio</a></li>
+            <li class="nav-button"><a href = "topmemes.html">Top Memes</a></li>
+            <li class="nav-button"><a href = "register.html">Register</a></li>
+        </ul>
+    </div>    
+ 
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="img/top-memes.jpg" >   
+        </div>
+  
+        <div class="mySlides fade">   
+            <img src="img/top2-memes.jpg">       
+        </div>
+  
+        <div class="mySlides fade">
+            <img src="img/top3-memes.jpg" >    
+        </div>
+  
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+  
+    <div class="dot-style">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script type="text/javascript" src="js/slides.js"> </script>   
+</body>
+</html>
