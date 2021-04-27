@@ -13,6 +13,7 @@
     margin-right: 5%;
     color:darkgoldenrod;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
     padding: 5px;
     border: 2px solid darkgoldenrod;
     border-radius: 8px;
@@ -21,8 +22,9 @@
 }
 
 .nav-button:hover {
-    background-color: black;
-    color: goldenrod;
+    background-color: goldenrod;
+    border-color: goldenrod;
+    color: black;
 }
 
 .nav-bar{
@@ -53,6 +55,7 @@ body {
     margin-bottom: 15px;
     /* padding: 10px; */
     justify-content: center;
+    text-align: center;
     /* width: 100%; */
 }
 
@@ -77,13 +80,14 @@ body {
     width: 40%;
     padding: 10px;
     margin: 10px;
-    border: 5px dashed yellow;
+    /* border: 5px dashed yellow; */
     justify-content: center;
     text-align: center;
 }
 
 .meme-post img {
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 .comments {
@@ -93,8 +97,60 @@ body {
     border: 5px dashed violet;
 }
 
+.formulario {
+    border: 2px solid darkgoldenrod;
+    border-radius: 8px;
+    max-width: 500px;
+    color:darkgoldenrod;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+input {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    border-radius: 7px;
+    margin-bottom: 3%;
+}
+
+label {
+    font-weight: bold;
+}
+
+#register_button {
+    font-style: normal;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    margin-top: 5%;
+    border: 3px darkgoldenrod solid;
+    background-color: transparent;
+    color: darkgoldenrod;
+    max-width: fit-content;
+}
+
+.register_button_div {
+    text-align: center;
+}
+
+#register_button:hover {
+    background-color: goldenrod;
+    border-color: goldenrod;
+    color: black;
+}
+
 div {
-    border: 1px dashed white;
+    /* border: 1px dashed white; */
 }
 
 
