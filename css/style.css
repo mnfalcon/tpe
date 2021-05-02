@@ -67,7 +67,8 @@ body {
     width: 20%;
     padding: 10px;
     margin: 10px;
-    border: 5px dashed blue;
+    border: 5px rgb(107, 107, 107) solid;
+    border-radius: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -109,7 +110,8 @@ body {
     width: 20%;
     padding: 10px;
     margin: 10px;
-    border: 5px dashed violet;
+    border: 5px rgb(107, 107, 107) solid;
+    border-radius: 5px;
     background-image: url(../img/comments.jpg);
     background-size: contain;
     background-repeat: no-repeat;
