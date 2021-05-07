@@ -22,9 +22,11 @@ status.innerText = ""
 
 function check(){
 let userValue = document.getElementById("entered-captcha").value;
+let register = document.getElementById("register_button");
 if(userValue == captcha)
 {
     status.innerText = "The code is correct ✔";
+    register.disabled = false;
 }
 else
 {
