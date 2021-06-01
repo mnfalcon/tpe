@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Meme Box</title>
+</head>
+<body>
+    <header class="header">  
+            <ul id="nav-bar" class="nav-bar">
+                <a href = "index.html" class="nav-button"><li>Home</li></a>
+                <a href = "topmemes.html" class="nav-button"><li>Top Memes</li></a>
+                <!-- <li class="nav-button">Trending</li>
+                <li class="nav-button">Submit Meme</li>
+                <li class="nav-button">Log In</li> -->
+                <a href = "register.html" class="nav-button"><li>Register</li></a>
+                <a href = "tablaDinamica.html" class="nav-button"><li>Tabla Dinamica</li></a>
+            </ul> 
+            <button class="toggleNavBar" type="button">ᐱ Hide Nav Bar ᐱ</button>     
+    </header>
+    <div class="contenedorTablaYFormulario">
+    
+        <div class="formularioTabla">
+            <form id="formularioDeCarga">
+                <input type="text" id="name" oninput="precargarFila()" autocomplete="disabled">
+                <input type="number" id="age" oninput="precargarFila()">
+                <input type="text" id="activity" oninput="precargarFila()">
+                <input type="text" id="likesMemes" oninput="precargarFila()">
+                <button id="btn-InsertarFila" onclick="insertarFila()" type="button">Insertar Fila</button>
+                <button id="btn-Test" onclick="CargarElementosDePrueba()" type="button">Cargar elementos de prueba</button>
+                <button id="btn-CargarTabla" onclick="cargarTabla()" type="button">Cargar Tabla</button>
+                <button id="btn-Vaciar" onclick="vaciarTabla()" type="button">Vaciar Tabla</button>
+                <button id="btn-CambiarEstilo" onclick="AplicarFiltroFilas()" type="button">Resaltar mayores de:</button><input type="number" id="filtroEdad">
+            </form>
+        </div>
+
+        <div class="divTabla"> 
+            <table id="tablaDinamica">     
+                <thead class="tableHead">           
+                    <tr>                
+                        <th>Name</th>                 
+                        <th>Age</th>                 
+                        <th>Activity</th>
+                        <th>Likes Memes?</th>
+                    </tr>
+                </thead>           
+                <tbody id="tableBody">
+                    <tfoot>
+                        <th id="cellDisplay1"></th>
+                        <th id="cellDisplay2"></th>
+                        <th id="cellDisplay3"></th>
+                        <th id="cellDisplay4"></th>
+                    </tfoot>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <footer class="footer">
+    </footer>
+    <script type="text/javascript" src="js/tablaDinamica.js"></script>
+    <script type="text/javascript" src="js/hideNavBar.js"></script>   
+</body>
+</html>
