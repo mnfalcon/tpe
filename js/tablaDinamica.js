@@ -4,6 +4,8 @@ let datos = [{"name": "Juan", "age": 22, "activity": "Meme Connoisseur", "likesM
 let tabla = document.getElementById("tableBody");
 let form = document.getElementById("formularioDeTabla");
 
+addEventListener('onload', CargarElementosDePrueba());
+
 function precargarFila(){
     
     let name = document.getElementById("name").value;
@@ -25,7 +27,7 @@ function precargarFila(){
 function insertarFila(){
     let temp = {};
     let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value.parseInt();
+    let age = document.getElementById("age").value;
     let activity = document.getElementById("activity").value;
     let likes = document.getElementById("likesMemes").value;
 
@@ -82,6 +84,7 @@ function vaciarTabla(){
 }
 
 function CargarElementosDePrueba(){
+
     let temp1 = {"name": "Jorge", "age": 7, "activity": "Fortnite Enthusiast", "likesMemes": "He's the meme"};
     let temp2 = {"name": "Raul", "age": 12, "activity": "Annoying Cat", "likesMemes": "No"};
     let temp3 = {"name": "Wanda", "age": 28, "activity": "Scarlet Witch", "likesMemes": "Probably"};
@@ -94,13 +97,14 @@ function CargarElementosDePrueba(){
 }
 
 function AplicarFiltroFilas(){
-    let filtro = parseInt(document.getElementById("filtroEdad").value);
+    let filtroEdad = parseInt(document.getElementById("filtroEdad").value);
     let filas = document.getElementsByTagName("tr");
 
     for(let i = 0; i < filas.length; i++){
+        filas[i].style.backgroundColor = "inherit";
         let td = filas[i].cells[1].innerHTML;
-        let asd = parseInt(td);
-        if (asd > filtro) {
+        let numeroEnLaCelda = parseInt(td);
+        if (numeroEnLaCelda > filtroEdad) {
             filas[i].style.backgroundColor = "goldenrod";
         }
 

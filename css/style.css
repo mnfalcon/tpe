@@ -456,15 +456,6 @@ table, td, tr {
     .box-story {
         flex-direction: column;
     }
-    /* .author-info{
-        display: visible;
-        width: 100%;
-        height: 50px;
-        overflow: hidden;
-        padding: 0px;
-        margin: 10px;
-        
-    } */
     .comments, .author-info {
         display: none;
     }
@@ -477,27 +468,11 @@ table, td, tr {
         justify-content: center;
         width: 90%;
     }
-    #formularioDeCarga {
+    #formularioDeCarga, #tablaDinamica, .formularioTabla {
         justify-content: center;
         text-align: center;
         margin: auto;
     }
-    #tablaDinamica {
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-    }
-
-    .formularioTabla {
-        justify-content: center;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-#filtroEdad {
-    display: inline;
 }
 
 .toggleNavBar {
