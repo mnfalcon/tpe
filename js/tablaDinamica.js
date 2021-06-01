@@ -40,11 +40,16 @@ function insertarFila(){
     cargarFila(name, age, activity, likes);
     console.log(datos);
 
+    vaciarInputs();
+}
+
+function vaciarInputs(){
     document.getElementById("name").value = "";
     document.getElementById("age").value = "";
     document.getElementById("activity").value = "";
     document.getElementById("likesMemes").value = "";
 }
+
 
 function cargarFila(name, age, activity, likes){
     let fila = tabla.insertRow(-1);
@@ -81,6 +86,7 @@ function vaciarTabla(){
     while(tabla.hasChildNodes()){
         tabla.removeChild(tabla.lastChild);
     }
+    vaciarInputs();
 }
 
 function CargarElementosDePrueba(){
