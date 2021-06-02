@@ -107,7 +107,7 @@ function AplicarFiltroFilas(){
     let filas = document.getElementsByTagName("tr");
 
     for(let i = 0; i < filas.length; i++){
-        filas[i].style.backgroundColor = "inherit";
+        filas[i].style.backgroundColor = "inherit"; //Devuelve el color original a las celdas
         let td = filas[i].cells[1].innerHTML;
         let numeroEnLaCelda = parseInt(td);
         if (numeroEnLaCelda > filtroEdad) {

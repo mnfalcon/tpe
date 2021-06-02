@@ -6,8 +6,6 @@
     
 }    
 .nav-button {
-    /* overflow: auto; */
-    /* text-overflow: inherit; */
     margin-right: 5%;
     padding:5px;
     list-style: none;
@@ -24,6 +22,7 @@
 	font-weight:bold;	
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
+    min-width: fit-content;
 }
 
 .nav-button:hover {
@@ -124,7 +123,6 @@ body {
 }
 
 .comments {
-    /* overflow: auto; */
     position: relative;
     width: 20%;
     padding: 10px;
@@ -138,10 +136,12 @@ body {
 
 .comment-box-container {
     /* box-sizing: content-box; */
-    display: flex;
+    /* display: flex;
     max-width: 95%;
     flex-direction: row;
     position:absolute;
+    bottom: 2%; */
+    position: absolute;
     bottom: 2%;
     
 }
@@ -208,7 +208,7 @@ form {
     padding: 2%;
 }
 
-input {
+.inputRegister {
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
@@ -453,10 +453,16 @@ table, td, tr {
 
 @media only screen and (max-width: 700px){
 
+    .nav-bar {
+        flex-direction: column;
+    }
+    .nav-button {
+        margin-bottom: 1px;
+    }
     .box-story {
         flex-direction: column;
     }
-    .comments, .author-info {
+    .comments {
         display: none;
     }
     .memes {
@@ -472,6 +478,36 @@ table, td, tr {
         justify-content: center;
         text-align: center;
         margin: auto;
+    }
+    .author-info {
+        overflow:visible;
+        width: 100%;
+        padding: 1px;
+        margin: 1px;
+        border: 0px inset rgba(7,7,7,0.92);
+        border-radius: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        max-height: 40px;
+        text-align: left;
+    
+    }
+    
+    .author-info ul li {
+        display: none;
+    }
+    
+    .author-info .author-name {
+        font-size: 16px;
+        font-weight: bold;
+        display: initial;
+        text-align: left;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+    ul {
+        padding-inline-end: 0;
+        padding-inline-start: 0;
     }
 }
 
@@ -493,4 +529,10 @@ table, td, tr {
         display: flex !important; 
     }
 
+}
+
+@media only screen and (max-width: 1000px){
+    .comment-box-container{
+        max-width: 175px;
+    }
 }

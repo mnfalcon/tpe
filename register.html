@@ -47,18 +47,18 @@
                 </tr>
             </table>
             <form action="">
-                <span><input type="radio" name = "account-type" value = "Meme-viewer"> Meme-viewer</span>
-                <span><input type="radio" name = "account-type" value = "Meme-creator"> Meme-creator</span>
-                <span><input type="radio" name = "account-type" value = "Meme-creator"> Viewer & Creator</span>
-                <span><input type="radio" name = "account-type" value = "Supporter"> Supporter</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Meme-viewer"> Meme-viewer</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Meme-creator"> Meme-creator</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Meme-creator"> Viewer & Creator</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Supporter"> Supporter</span>
                 <label for = "username">Username</label>
-                <input type="text" placeholder="Username" name="username" id="username" required>
+                <input class="inputRegister" type="text" placeholder="Username" name="username" id="username" required>
                 <label for = "email">Email</label>
-                <input type="text" placeholder="Email" name="email" id="email" required>
+                <input class="inputRegister" type="text" placeholder="Email" name="email" id="email" required>
                 <label for = "password">Password</label>
-                <input type="password" placeholder="Password" name="password" id="password" required>
+                <input class="inputRegister" type="password" placeholder="Password" name="password" id="password" required>
                 <label for = "password">Repeat Password</label>
-                <input type="password" placeholder="Repeat Password" name="repeat password" id="repeat password" required>
+                <input class="inputRegister" type="password" placeholder="Repeat Password" name="repeat password" id="repeat password" required>
                 <div class = "captcha-div">
                     <input type="text" readonly id = "generated-captcha">
                     <button type="button" onclick="generate()" class="captcha-button">
