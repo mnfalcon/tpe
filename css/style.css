@@ -93,6 +93,11 @@ body {
     margin-bottom: 5%;
     font-size: small;
     margin-left: 10%;
+    
+}
+
+.author-info ul {
+    padding-inline-start: 0;
 }
 
 .author-info .author-name {
@@ -533,6 +538,6 @@ table, td, tr {
 
 @media only screen and (max-width: 1000px){
     .comment-box-container{
-        max-width: 175px;
+        max-width: 100px;
     }
 }
