@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Register</title>
 </head>
-<body onload = "generate()">
+<body onload = "generate_captcha()">
     <header class="header">
         
             <ul class="nav-bar">
@@ -22,7 +22,7 @@
             <button class="toggleNavBar" type="button">ᐱ Hide Nav Bar ᐱ</button>
         </header>
 
-    <div class="content">
+    <div class="content-form">
         <div class = "formulario">
             <table class = "account-types">
                 <tr class = "table-header">
@@ -61,7 +61,7 @@
                 <input class="inputRegister" type="password" placeholder="Repeat Password" name="repeat password" id="repeat password" required>
                 <div class = "captcha-div">
                     <input type="text" readonly id = "generated-captcha">
-                    <button type="button" onclick="generate()" class="captcha-button">
+                    <button type="button" onclick="generate_captcha()" class="captcha-button">
                         Generate new captcha
                     </button>
                     <input type="text" id="entered-captcha" placeholder="Enter the above code..">

@@ -5,7 +5,7 @@ let alphabets =
   "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890";
 let status = document.getElementById("status");
 
-function generate() {
+function generate_captcha() {
   let first = alphabets[Math.floor(Math.random() * alphabets.length)];
   let second = alphabets[Math.floor(Math.random() * alphabets.length)];
   let third = alphabets[Math.floor(Math.random() * alphabets.length)];
