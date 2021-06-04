@@ -530,8 +530,8 @@ table, td, tr {
     .toggleNavBar {
         display: none;
     }
-    #nav-bar {
-        display: flex !important; 
+    .nav-bar {
+        display: flex !important;
     }
 
 }
