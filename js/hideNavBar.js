@@ -1,8 +1,7 @@
-let btn = document.getElementsByClassName("toggleNavBar")[0];
-
 btn.addEventListener('click', toggleNavBar);
 
 function toggleNavBar(){
+    let btn = document.getElementsByClassName("toggleNavBar")[0];
     let navBar = document.getElementsByClassName("nav-bar")[0];
 
     if (navBar.style.display != "none"){
