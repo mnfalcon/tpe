@@ -1,12 +1,11 @@
 "use strict";
 
 let datos = [{"name": "Juan", "age": 22, "activity": "Meme Connoisseur", "likesMemes": "Yes"}]
-let tabla = document.getElementById("tableBody");
-let form = document.getElementById("formularioDeTabla");
 
 addEventListener('onload', CargarElementosDePrueba());
 
 function precargarFila(){
+    
     
     let name = document.getElementById("name").value;
     let age = document.getElementById("age").value;
@@ -39,8 +38,6 @@ function insertarFila(){
     datos.push(temp);
     cargarFila(name, age, activity, likes);
     console.log(datos);
-
-    vaciarInputs();
 }
 
 function vaciarInputs(){
@@ -48,10 +45,21 @@ function vaciarInputs(){
     document.getElementById("age").value = "";
     document.getElementById("activity").value = "";
     document.getElementById("likesMemes").value = "";
+
+    let display1 = document.getElementById("cellDisplay1");
+    let display2 = document.getElementById("cellDisplay2");
+    let display3 = document.getElementById("cellDisplay3");
+    let display4 = document.getElementById("cellDisplay4");
+    display1.innerHTML = '';
+    display2.innerHTML = '';
+    display3.innerHTML = '';
+    display4.innerHTML = '';
 }
 
 
 function cargarFila(name, age, activity, likes){
+    let tabla = document.getElementById("tableBody");
+
     let fila = tabla.insertRow(-1);
     let celda0 = fila.insertCell(0);
     let celda1 = fila.insertCell(1);
@@ -62,10 +70,10 @@ function cargarFila(name, age, activity, likes){
     celda1.innerHTML = age;
     celda2.innerHTML = activity;
     celda3.innerHTML = likes;
-
 }
 
 function cargarTabla(){
+    let tabla = document.getElementById("tableBody");
 
     for(let i = 0; i < datos.length; i++){
         let fila = tabla.insertRow(-1);
@@ -82,6 +90,7 @@ function cargarTabla(){
 }
 
 function vaciarTabla(){
+    let tabla = document.getElementById("tableBody");
     datos = [];
     while(tabla.hasChildNodes()){
         tabla.removeChild(tabla.lastChild);
@@ -100,6 +109,12 @@ function CargarElementosDePrueba(){
     datos.push(temp3);
 
     cargarTabla();
+}
+
+function CargarTres(){
+    insertarFila();
+    insertarFila();
+    insertarFila();
 }
 
 function AplicarFiltroFilas(){

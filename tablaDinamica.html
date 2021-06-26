@@ -8,7 +8,8 @@
     <title>Meme Box</title>
 </head>
 <body>
-    <header class="header">  
+    <header class="header">
+        <nav>
             <ul id="nav-bar" class="nav-bar">
                 <a href = "index.html" class="nav-button"><li>Home</li></a>
                 <a href = "topmemes.html" class="nav-button"><li>Top Memes</li></a>
@@ -19,6 +20,7 @@
                 <a href = "tablaDinamica.html" class="nav-button"><li>Tabla Dinamica</li></a>
             </ul> 
             <button class="toggleNavBar" type="button">ᐱ Hide Nav Bar ᐱ</button>     
+        </nav>
     </header>
     <div class="contenedorTablaYFormulario">
     
@@ -28,10 +30,12 @@
                 <input type="number" id="age" oninput="precargarFila()" placeholder="Age">
                 <input type="text" id="activity" oninput="precargarFila()" placeholder="Activity">
                 <input type="text" id="likesMemes" oninput="precargarFila()" placeholder="Likes memes?">
+                <button id="btn-InsertarFila" onclick="vaciarInputs()" type="button">Limpiar campos</button>
                 <button id="btn-InsertarFila" onclick="insertarFila()" type="button">Insertar Fila</button>
                 <button id="btn-Test" onclick="CargarElementosDePrueba()" type="button">Cargar elementos de prueba</button>
                 <button id="btn-CargarTabla" onclick="cargarTabla()" type="button">Cargar Tabla</button>
                 <button id="btn-Vaciar" onclick="vaciarTabla()" type="button">Vaciar Tabla</button>
+                <button id="btn-CargarTres" onclick="CargarTres()" type="button">Cargar 3</button>
                 <button id="btn-CambiarEstilo" onclick="AplicarFiltroFilas()" type="button">Resaltar mayores de:</button><input type="number" id="filtroEdad">
             </form>
         </div>
