@@ -1,9 +1,9 @@
 "use strict";
 
-let captcha;
-let alphabets =
+var captcha;
+var alphabets =
   "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890";
-let status = document.getElementById("status");
+generate_captcha();
 
 function generate_captcha() {
   let first = alphabets[Math.floor(Math.random() * alphabets.length)];
@@ -12,6 +12,7 @@ function generate_captcha() {
   let fourth = alphabets[Math.floor(Math.random() * alphabets.length)];
   let fifth = alphabets[Math.floor(Math.random() * alphabets.length)];
   let sixth = Math.floor(Math.random() * 10);
+  let status = document.getElementById("status");
 
   captcha =
     first.toString() +
@@ -29,6 +30,7 @@ function generate_captcha() {
 function check() {
   let userValue = document.getElementById("entered-captcha").value;
   let register = document.getElementById("register_button");
+  let status = document.getElementById("status");
   if (userValue == captcha) {
     status.innerText = "The code is correct ✔";
     register.disabled = false;

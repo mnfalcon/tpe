@@ -1,0 +1,67 @@
+<div class="content-form">
+        <div class = "formulario">
+            <table class = "account-types">
+                <tr class = "table-header">
+                    <td>Account type</td>
+                    <td>Price</td>
+                    <td>Ads</td>
+                </tr>
+                <tr>
+                    <td>Meme-viewer</td>
+                    <td>Free</td>
+                    <td>Some ads</td>
+                </tr>
+                <tr>
+                    <td>Meme-creator</td>
+                    <td>Free</td>
+                    <td>A few ads</td>
+                </tr>
+                <tr>
+                    <td>Supporter</td>
+                    <td>5 U$D </td>
+                    <td>No ads</td>
+                </tr>
+            </table>
+            <form action="">
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Meme-viewer"> Meme-viewer</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Meme-creator"> Meme-creator</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Meme-creator"> Viewer & Creator</span>
+                <span><input class="inputRegister" type="radio" name = "account-type" value = "Supporter"> Supporter</span>
+                <label for = "username">Username</label>
+                <input class="inputRegister" type="text" placeholder="Username" name="username" id="username" required>
+                <label for = "email">Email</label>
+                <input class="inputRegister" type="text" placeholder="Email" name="email" id="email" required>
+                <label for = "password">Password</label>
+                <input class="inputRegister" type="password" placeholder="Password" name="password" id="password" required>
+                <label for = "password">Repeat Password</label>
+                <input class="inputRegister" type="password" placeholder="Repeat Password" name="repeat password" id="repeat password" required>
+                <div class = "captcha-div">
+                    <input type="text" readonly id = "generated-captcha">
+                    <button type="button" onclick="generate_captcha()" class="captcha-button">
+                        Generate new captcha
+                    </button>
+                    <input type="text" id="entered-captcha" placeholder="Enter the above code..">
+                    <button type="button" onclick="check()" class="captcha-button">
+                        Check captcha
+                    </button>
+                    <h5 id = "status"></h5>
+
+                </div>
+                
+                <span>
+                    <input type="checkbox" name="info" id="info-checkbox">
+                    Please send memes to my e-mail
+                </span>
+                <div class = "register_button_div">
+                    <button type="submit" id="register_button" disabled> Register </button>
+                </div>
+            </form>
+
+        </div>
+
+    
+    </div>
+
+    <footer class="footer">
+
+    </footer>  

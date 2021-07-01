@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Meme Box</title>
-</head>
-<body>
-    <header class="header">
-        <nav>
-            <ul id="nav-bar" class="nav-bar">
-                <a href = "index.html" class="nav-button"><li>Home</li></a>
-                <a href = "topmemes.html" class="nav-button"><li>Top Memes</li></a>
-                <!-- <li class="nav-button">Trending</li>
-                <li class="nav-button">Submit Meme</li>
-                <li class="nav-button">Log In</li> -->
-                <a href = "register.html" class="nav-button"><li>Register</li></a>
-                <a href = "tablaDinamica.html" class="nav-button"><li>Tabla Dinamica</li></a>
-            </ul> 
-            <button class="toggleNavBar" type="button">ᐱ Hide Nav Bar ᐱ</button>     
-        </nav>
-    </header>
-    <div class="contenedorTablaYFormulario">
+<div class="contenedorTablaYFormulario">
     
         <div class="formularioTabla">
             <form id="formularioDeCarga">
@@ -47,10 +23,12 @@
                     <input type="number" id="filtroEdad">
                 </div>
                 <button id='btn-QuitarFiltro' onclick="QuitarFiltroFilas()" type="button">Quitar Filtro</button>
+                <button id='btn-MostrarTodo' onclick="llamarJson()" type="button">Mostrar todo en una pagina</button>
+                <button id='btn-MostrarPaginado' onclick="Anterior()" type="button">Mostrar paginado</button>
             </form>
         </div>
 
-        <div class="divTabla"> 
+        <div class="divTabla" onload="llamarJson()"> 
             <table id="tablaDinamica">     
                 <thead class="tableHead">           
                     <tr id="trHeader">                
@@ -76,7 +54,7 @@
                         <th class="thHeaderFilter"></th>
                     </tr>
                 </thead>           
-                <tbody id="tableBody">
+                <tbody id="tableBody" onload="llamarJson()">
                     <tfoot>
                         <tr id="tableFoot">
                             <th class="thHeader" id="cellDisplay1"></th>
@@ -89,13 +67,12 @@
                     </tfoot>
                 </tbody>
             </table>
-            <div id="tableNavButtons"><button type="button">Anterior</button><button type="button">Siguiente</button></div>
+            <div id="tableNavButtons"><button type="button" id="btnAnterior" onclick="Anterior()">Anterior</button><button type="button" id="btnSiguiente" onclick="Siguiente()">Siguiente</button></div>
         </div>
+        
 
     </div>
     <footer class="footer">
-    </footer>
-    <script type="text/javascript" src="js/tablaDinamica.js"></script>
-    <script type="text/javascript" src="js/hideNavBar.js"></script>   
-</body>
-</html>
+    </footer> 
+<script type="text/javascript" src="js/tablaDinamica.js"></script>
+<script type="text/javascript" src="js/hideNavBar.js"></script>

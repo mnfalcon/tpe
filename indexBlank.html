@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Box</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul id="nav-bar" class="nav-bar">
+                <a onclick="loadFeed()" class="nav-button"><li>Home</li></a>
+                <a onclick="loadTopMemes()" class="nav-button"><li>Top Memes</li></a>
+                <!-- <li class="nav-button">Trending</li>
+                <li class="nav-button">Submit Meme</li>
+                <li class="nav-button">Log In</li> -->
+                <a onclick="loadRegister()" class="nav-button"><li>Register</li></a>
+                <button id="btnTabla" onclick="loadTabla()" class="nav-button"><li>Tabla Dinamica</li></button>
+            </ul> 
+            <button class="toggleNavBar" type="button">ᐱ Hide Nav Bar ᐱ</button>     
+        </nav>
+    </header>
+    <div id='mainContent'></div>
+    <script src="js/spa.js"></script>
+    <!-- <script type="text/javascript" src="js/tablaDinamica.js"></script> -->
+    <script type="text/javascript" src="js/hideNavBar.js"></script>
+    <!-- <script type="text/javascript" src="js/captcha.js"></script> -->
+    <!-- <script type="text/javascript" src="js/slides.js"></script> -->
+</body>
+</html>
