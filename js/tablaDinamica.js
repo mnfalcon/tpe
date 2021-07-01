@@ -74,8 +74,10 @@ async function postData(datos){
             console.log('POST Method was successful.')
             // vaciarTabla();
             // cargarTablaParcial();
-            CurrentPage();
             vaciarInputs();
+            if(document.getElementById('tableBody').rows.length < 20){
+                cargarTablaParcial();
+            }
         }
     } catch (error){
         console.log(error)
@@ -129,7 +131,7 @@ function cargarTabla(datos){
 
 async function cargarTablaParcial(){
     try {
-        let url = 'https://60d7a6e6307c300017a5f938.mockapi.io/memes1/memers'
+        let url = `https://60d7a6e6307c300017a5f938.mockapi.io/memes1/memers?page=${currentPage}&limit=20`
         let obj = await fetch(url);
         let datos = await obj.json();
         for(let i = 0; i < datos.length; i++){
@@ -406,9 +408,9 @@ async function Anterior(){
         console.log(url);
         let obj = await fetch(url);
         let data = await obj.json();
-        let half = parseInt(data.length/2);
-        console.log(data/*.slice(0, half)*/);
-        cargarTabla(data/*.slice(0, half)*/);
+        console.log(data);
+        cargarTabla(data);
+        filtrosSimultaneos();
         console.log('MockApi called. Page: ' + currentPage);
     } catch (error){
         console.log(error);
@@ -423,9 +425,9 @@ async function Siguiente(){
         console.log(url);
         let obj = await fetch(url);
         let data = await obj.json();
-        let half = parseInt(data.length/2);
-        console.log(data/*.slice(half)*/);
-        cargarTabla(data/*.slice(half)*/);
+        console.log(data);
+        cargarTabla(data);
+        filtrosSimultaneos();
         console.log('MockApi called. Page: ' + currentPage);
     } catch (error){
         console.log(error);
@@ -439,9 +441,8 @@ async function CurrentPage(){
         console.log(url);
         let obj = await fetch(url);
         let data = await obj.json();
-        let half = parseInt(data.length/2);
-        console.log(data/*.slice(half)*/);
-        cargarTabla(data/*.slice(half)*/);
+        console.log(data);
+        cargarTabla(data);
         console.log('MockApi called. Page: ' + currentPage);
     } catch (error){
         console.log(error);
