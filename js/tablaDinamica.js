@@ -2,7 +2,7 @@
 
 // document.getElementById('btnTabla').addEventListener('onclick', llamarJson());
 // llamarJson();
-let currentPage = 1;
+var currentPage = 1;
 Anterior();
 
 async function llamarJson(){
@@ -73,7 +73,8 @@ async function postData(datos){
         if (res.status == 201){
             console.log('POST Method was successful.')
             // vaciarTabla();
-            cargarTablaParcial();
+            // cargarTablaParcial();
+            CurrentPage();
             vaciarInputs();
         }
     } catch (error){
@@ -418,6 +419,22 @@ async function Siguiente(){
     try {
         vaciarTabla();
         ++currentPage;
+        let url = `https://60d7a6e6307c300017a5f938.mockapi.io/memes1/memers?page=${currentPage}&limit=20`;
+        console.log(url);
+        let obj = await fetch(url);
+        let data = await obj.json();
+        let half = parseInt(data.length/2);
+        console.log(data/*.slice(half)*/);
+        cargarTabla(data/*.slice(half)*/);
+        console.log('MockApi called. Page: ' + currentPage);
+    } catch (error){
+        console.log(error);
+    }
+}
+
+async function CurrentPage(){
+    try {
+        vaciarTabla();
         let url = `https://60d7a6e6307c300017a5f938.mockapi.io/memes1/memers?page=${currentPage}&limit=20`;
         console.log(url);
         let obj = await fetch(url);
